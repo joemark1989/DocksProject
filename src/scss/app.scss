@@ -1,250 +1,246 @@
-@mixin centerText($top,$left,$fontSize) {
+// global styling
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+// Global variables and mixins using sass
+@mixin centerText($top, $left, $fontSize) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+  font-size: $fontSize;
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+@mixin navCollapse() {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: $top;
-    left: $left;
-    transform: translate(-50%, -50%);
-    font-size: $fontSize;
-    color: white;
-    text-shadow: 1px 1px #000;
+    top: 85%;
+    right: 0;
+    left: 0;
+    height: 100vh;
+  }
 }
-@mixin navCollapse(){
-    .navbar-collapse{
-        background: rgba(255,255,255,0.9);
-        position: absolute;
-        top: 85%;
-        right: 0;
-        left: 0;
-        height: 100vh;
-      }
+
+// navbar styling
+
+.navbar-brand {
+  font-size: 2.5rem
 }
-  
-  .mainImg{
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
+
+
+
+
+
+// Main page (Deck docks and things)
+
+.mainImg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../Images/Main.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #06a8ff;
+  border-right: 3px solid #06a8ff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
-  
-  .nav-link{
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+// media queries at certain viewpoints to get correct styling
+
+@media only screen and (max-width: 2560px) {
+  .centered {
+    @include centerText(20%, 50%, 70px);
+  }
+  .lead-centered {
+    @include centerText(40%, 50%, 30px);
+  }
+  .lead-centered-next {
+    @include centerText(62%, 50%, 30px);
+  }
+  .nav-link {
+    font-size: 2rem;
+    color: black;
+  }
+
+  .brand {
+    font-size: 2.5rem;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .centered {
+    @include centerText(15%, 50%, 70px);
+  }
+  .lead-centered {
+    @include centerText(35%, 50%, 30px);
+  }
+  .lead-centered-next {
+    @include centerText(60%, 50%, 30px);
+  }
+  .nav-link {
+    font-size: 1.8rem;
+    color: black;
+  }
+
+  .brand {
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .centered {
+    @include centerText(20%, 50%, 70px);
+  }
+  .lead-centered {
+    @include centerText(45%, 50%, 30px);
+  }
+  .lead-centered-next {
+    @include centerText(75%, 50%, 30px);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .centered {
+    @include centerText(20%, 50%, 45px);
+  }
+  .lead-centered {
+    @include centerText(45%, 50%, 20px);
+  }
+  .lead-centered-next {
+    @include centerText(70%, 50%, 20px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .centered {
+    @include centerText(20%, 50%, 45px);
+  }
+  .lead-centered {
+    @include centerText(45%, 50%, 20px);
+  }
+  .lead-centered-next {
+    @include centerText(70%, 50%, 20px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .centered {
+    @include centerText(20%, 50%, 35px);
+  }
+  .lead-centered {
+    @include centerText(45%, 50%, 20px);
+  }
+  .lead-centered-next {
+    @include centerText(75%, 50%, 20px);
+  }
+  @include navCollapse();
+}
+
+@media only screen and (max-width: 576px) {
+  .centered {
+    @include centerText(20%, 50%, 30px);
+  }
+  .lead-centered {
+    @include centerText(43%, 50%, 18px);
+  }
+  .lead-centered-next {
+    @include centerText(70%, 50%, 18px);
+  }
+  @include navCollapse();
+}
+
+@media only screen and (max-width: 425px) {
+  .centered {
+    @include centerText(20%, 50%, 30px);
+  }
+  .lead-centered {
+    @include centerText(42%, 35%, 16px);
+    transform: translate(-30%, -60%);
+  }
+  .lead-centered-next {
+    @include centerText(60%, 35%, 16px);
+    transform: translate(-30%, -60%);
+  }
+  .nav-link {
     font-size: 1.3rem;
     color: black;
   }
-  
-  .brand{
-    font-size: 1.5rem;
+
+  .navbar-brand {
+    font-size: 1.5rem
+  }
+  @include navCollapse();
+}
+
+@media only screen and (max-width: 360px) {
+  .centered {
+    @include centerText(17%, 50%, 25px);
+  }
+  .lead-centered {
+    @include centerText(42%, 30%, 16px);
+    transform: translate(-20%, -60%);
+  }
+  .lead-centered-next {
+    @include centerText(67%, 30%, 16px);
+    transform: translate(-20%, -60%);
+  }
+  .nav-link {
+    font-size: 1.3rem;
     color: black;
   }
-  
 
-  .arrow{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  .navbar-brand {
+    font-size: 1.5rem
   }
-  .arrow span{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-bottom: 3px solid #06A8FF;
-    border-right: 3px solid #06A8FF;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
-  }
-  .arrow span:nth-child(2){
-    animation-delay: -0.2s;
-  }
-  .arrow span:nth-child(3){
-    animation-delay: -0.4s;
-  }
-  @keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px);
-    }
-  }
-
-
-
-
-
-
-
-  // media queries
-
-  @media only screen and (max-width: 2560px) {
-    .centered {
-        @include centerText(20%,50%,70px);
-    }
-    .lead-centered{
-        @include centerText(40%,50%,30px);
-    }
-    .lead-centered-next{
-        @include centerText(62%,50%,30px);
-      }
-      .nav-link{
-        font-size: 2rem;
-        color: black;
-      }
-      
-      .brand{
-        font-size: 2.5rem;
-        color: black;
-      }
-  }
-
-  
-  @media only screen and (max-width: 1440px) {
-    .centered {
-        @include centerText(15%,50%,70px);
-    }
-    .lead-centered{
-        @include centerText(35%,50%,30px);
-    }
-    .lead-centered-next{
-        @include centerText(60%,50%,30px);
-      }
-      .nav-link{
-        font-size: 1.8rem;
-        color: black;
-      }
-      
-      .brand{
-        font-size: 2rem;
-        color: black;
-      }
-
-  }
-
-  @media only screen and (max-width: 1440px) {
-    .centered {
-        @include centerText(20%,50%,70px);
-    }
-    .lead-centered{
-        @include centerText(45%,50%,30px);
-    }
-    .lead-centered-next{
-        @include centerText(75%,50%,30px);
-      }
-
-  }
-
-
-  @media only screen and (max-width: 1200px) {
-    .centered {
-        @include centerText(20%,50%,45px);
-    }
-    .lead-centered{
-        @include centerText(45%,50%,20px);
-    }
-    .lead-centered-next{
-        @include centerText(70%,50%,20px);
-      }
-
-  }
-
-  @media only screen and (max-width: 992px) {
-    .centered {
-        @include centerText(20%,50%,45px);
-    }
-    .lead-centered{
-        @include centerText(45%,50%,20px);
-    }
-    .lead-centered-next{
-        @include centerText(70%,50%,20px);
-      }
-
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .centered {
-        @include centerText(20%,50%,35px);
-    }
-    .lead-centered{
-        @include centerText(45%,50%,20px);
-    }
-    .lead-centered-next{
-        @include centerText(75%,50%,20px);
-      }
-    @include navCollapse();
-  }
-
-
-  @media only screen and (max-width: 576px) {
-    .centered {
-        @include centerText(20%,50%,30px);
-    }
-    .lead-centered{
-        @include centerText(43%,50%,18px);
-    }
-    .lead-centered-next{
-        @include centerText(70%,50%,18px);
-      }
-    @include navCollapse();
-  }
-
-
-  @media only screen and (max-width: 425px) {
-    .centered {
-        @include centerText(20%,50%,30px);
-    }
-    .lead-centered{
-        @include centerText(42%,35%,16px);
-        transform: translate(-30%, -60%);
-    }
-    .lead-centered-next{
-        @include centerText(60%,35%,16px);
-        transform: translate(-30%, -60%);
-      }
-      .nav-link{
-        font-size: 1.3rem;
-        color: black;
-      }
-      
-      .brand{
-        font-size: 1.5rem;
-        color: black;
-      }
-      @include navCollapse();
-
-  }
-
-  
-  @media only screen and (max-width: 320px) {
-    .centered {
-        @include centerText(17%,50%,25px);
-    }
-    .lead-centered{
-        @include centerText(42%,30%,16px);
-        transform: translate(-20%, -60%);
-    }
-    .lead-centered-next{
-        @include centerText(65%,30%,16px);
-        transform: translate(-20%, -60%);
-      }
-      .nav-link{
-        font-size: 1.3rem;
-        color: black;
-      }
-      
-      .brand{
-        font-size: 1.5rem;
-        color: black;
-      }
-      @include navCollapse();
-
-  }
+  @include navCollapse();
+}

@@ -1,19 +1,18 @@
 import React from 'react';
-import './dist/app.css';
 import { useSpring, animated } from 'react-spring'
 
 
-//nav
+//nav I use some inline bootstrap styling here to get the effect of fixed-top
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-      <a className="navbar-brand ml-5" href="#"><p className="brand text-center">DD&T</p></a>
+      <a className="navbar-brand" href="#">DD&T</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarText">
-        <ul className="navbar-nav ml-auto mr-5">
+        <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
@@ -49,7 +48,7 @@ function Main() {
     config: { delay: 1000, duration: 1000 }
   })
   return (
-    <div className="main">
+    <div>
       <animated.div className="mainImg" style={props} />
       <h1 className="centered">Deck Docks & Things</h1>
       <p className="lead-centered">Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.

@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin')
 
 const files = {
     scssPath: './scss/*.scss',
-    imagePath: './images/*'
+    imagePath: './Images/*'
 }
 
 
@@ -35,9 +35,15 @@ function watchTask() {
 }
 
 
+function watchTask() {
+    watch([files.scssPath, files.imagePath],
+        parallel(scssTask, imageMin))
+}
+
+
 
 exports.default = series(
-    parallel(scssTask, imageMin),
+    parallel(scssTask),
     watchTask,
     imageMin
 )
