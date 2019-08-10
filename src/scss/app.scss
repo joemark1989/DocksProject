@@ -36,6 +36,13 @@ code {
   }
 }
 
+@mixin image($height,$width){
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: $height;
+    width: $width;
+}
+
 // navbar styling
 
 .navbar-brand {
@@ -43,19 +50,19 @@ code {
 }
 
 
-
-
-
 // Main page (Deck docks and things)
 
 .mainImg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../Images/Main.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
+      url(../Images/Main.jpg);
+  @include image(100vh,100%);
 }
+
+.tideSlide{
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 // Animated arrow to indicate to scroll down
 

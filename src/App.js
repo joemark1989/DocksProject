@@ -53,12 +53,11 @@ function Main() {
       <h1 className="centered">Deck Docks & Things</h1>
       <p className="lead-centered">Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
       Licensed and Insured CGC 1526414</p>
-      <p className="lead-centered-next">Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems.</p>
+      <p className="lead-centered-next">Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems. Check them out <a href="http://www.tideslide.com/" target="_blank" rel="noopener noreferrer"><span className="tideSlide">here!</span></a></p>
       <div className="arrow">
         <span></span>
         <span></span>
         <span></span>
-
       </div>
     </div>
   )
