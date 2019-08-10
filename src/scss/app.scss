@@ -1,6 +1,6 @@
 // global styling
 
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -42,6 +42,10 @@ code {
     height: $height;
     width: $width;
 }
+@mixin background {
+  background: grey;
+  height: 100vh;
+}
 
 // navbar styling
 
@@ -54,7 +58,7 @@ code {
 
 .mainImg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../Images/Main.jpg);
+      url(../images/Main.jpg);
   @include image(100vh,100%);
 }
 
@@ -74,8 +78,8 @@ code {
 }
 .arrow span {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-bottom: 3px solid #06a8ff;
   border-right: 3px solid #06a8ff;
   transform: rotate(45deg);
@@ -104,20 +108,22 @@ code {
 
 // about 
 
-
+.background{
+  @include background();
+}
 
 
 // media queries at certain viewpoints to get correct styling
 
 @media only screen and (max-width: 2560px) {
   .centered {
-    @include centerText(20%, 50%, 70px);
+    @include centerText(20%, 50%, 85px);
   }
   .lead-centered {
-    @include centerText(40%, 50%, 30px);
+    @include centerText(41%, 50%, 40px);
   }
   .lead-centered-next {
-    @include centerText(62%, 50%, 30px);
+    @include centerText(68%, 50%, 40px);
   }
   .nav-link {
     font-size: 2rem;
@@ -132,34 +138,13 @@ code {
 
 @media only screen and (max-width: 1440px) {
   .centered {
-    @include centerText(15%, 50%, 70px);
+    @include centerText(20%, 50%, 65px);
   }
   .lead-centered {
-    @include centerText(35%, 50%, 30px);
+    @include centerText(45%, 50%, 28px);
   }
   .lead-centered-next {
-    @include centerText(60%, 50%, 30px);
-  }
-  .nav-link {
-    font-size: 1.8rem;
-    color: black;
-  }
-
-  .brand {
-    font-size: 2rem;
-    color: black;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  .centered {
-    @include centerText(20%, 50%, 70px);
-  }
-  .lead-centered {
-    @include centerText(45%, 50%, 30px);
-  }
-  .lead-centered-next {
-    @include centerText(75%, 50%, 30px);
+    @include centerText(75%, 50%, 28px);
   }
 }
 
@@ -168,10 +153,10 @@ code {
     @include centerText(20%, 50%, 45px);
   }
   .lead-centered {
-    @include centerText(45%, 50%, 20px);
+    @include centerText(45%, 50%, 25px);
   }
   .lead-centered-next {
-    @include centerText(70%, 50%, 20px);
+    @include centerText(70%, 50%, 25px);
   }
 }
 
@@ -205,10 +190,10 @@ code {
     @include centerText(20%, 50%, 30px);
   }
   .lead-centered {
-    @include centerText(43%, 50%, 18px);
+    @include centerText(38%, 50%, 18px);
   }
   .lead-centered-next {
-    @include centerText(70%, 50%, 18px);
+    @include centerText(63%, 50%, 18px);
   }
   @include navCollapse();
 }
@@ -222,7 +207,7 @@ code {
     transform: translate(-30%, -60%);
   }
   .lead-centered-next {
-    @include centerText(60%, 35%, 16px);
+    @include centerText(62%, 35%, 16px);
     transform: translate(-30%, -60%);
   }
   .nav-link {
@@ -236,7 +221,7 @@ code {
   @include navCollapse();
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
   .centered {
     @include centerText(17%, 50%, 25px);
   }
