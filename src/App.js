@@ -64,6 +64,12 @@ function Main() {
   )
 }
 
+function About() {
+  return (
+    <div></div>
+  )
+}
+
 
 
 
@@ -72,7 +78,8 @@ function App() {
     <div className="">
       <Nav />
       <Main />
-    </div>
+      <About />
+    </div >
   );
 }
 
