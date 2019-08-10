@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './dist/app.css';
 import { useSpring, animated } from 'react-spring'
 
 
@@ -8,7 +8,7 @@ import { useSpring, animated } from 'react-spring'
 function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-      <a className="navbar-brand" href="#"><i className="brand text-center">DD&T</i></a>
+      <a className="navbar-brand ml-5" href="#"><p className="brand text-center">DD&T</p></a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -51,15 +51,15 @@ function Main() {
   return (
     <div className="main">
       <animated.div className="mainImg" style={props} />
-      <h1 className="centered"><i>Deck Docks & Things</i></h1>
+      <h1 className="centered">Deck Docks & Things</h1>
       <p className="lead-centered">Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
       Licensed and Insured CGC 1526414</p>
       <p className="lead-centered-next">Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems.</p>
-      <div className="arrow_box lead-centered-next"></div>
       <div className="arrow">
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
       </div>
     </div>
   )

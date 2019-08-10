@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
     font-size: $fontSize;
     color: white;
-    text-shadow: 2px 2px #000;
+    text-shadow: 1px 1px #000;
 }
 @mixin navCollapse(){
     .navbar-collapse{
@@ -21,10 +21,10 @@
   .mainImg{
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
-    url(Images/Main.jpg);
+    url(../Images/Main.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -40,35 +40,31 @@
     font-size: 1.5rem;
     color: black;
   }
+  
 
-  body{
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-}
-.arrow{
+  .arrow{
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%,-50%);
-}
-.arrow span{
+  }
+  .arrow span{
     display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 5px solid #06A8FF;
-    border-right: 5px solid #06A8FF;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #06A8FF;
+    border-right: 3px solid #06A8FF;
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
-}
-.arrow span:nth-child(2){
+  }
+  .arrow span:nth-child(2){
     animation-delay: -0.2s;
-}
-.arrow span:nth-child(3){
+  }
+  .arrow span:nth-child(3){
     animation-delay: -0.4s;
-}
-@keyframes animate {
+  }
+  @keyframes animate {
     0%{
         opacity: 0;
         transform: rotate(45deg) translate(-20px,-20px);
@@ -80,13 +76,7 @@
         opacity: 0;
         transform: rotate(45deg) translate(20px,20px);
     }
-}
-
-
-
-
-
-
+  }
 
 
 
@@ -213,11 +203,11 @@
         @include centerText(20%,50%,30px);
     }
     .lead-centered{
-        @include centerText(47%,30%,16px);
+        @include centerText(42%,35%,16px);
         transform: translate(-30%, -60%);
     }
     .lead-centered-next{
-        @include centerText(70%,30%,16px);
+        @include centerText(60%,35%,16px);
         transform: translate(-30%, -60%);
       }
       .nav-link{
@@ -236,15 +226,15 @@
   
   @media only screen and (max-width: 320px) {
     .centered {
-        @include centerText(15%,50%,25px);
+        @include centerText(17%,50%,25px);
     }
     .lead-centered{
-        @include centerText(40%,30%,16px);
-        transform: translate(-30%, -60%);
+        @include centerText(42%,30%,16px);
+        transform: translate(-20%, -60%);
     }
     .lead-centered-next{
         @include centerText(65%,30%,16px);
-        transform: translate(-30%, -60%);
+        transform: translate(-20%, -60%);
       }
       .nav-link{
         font-size: 1.3rem;

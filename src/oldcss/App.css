@@ -1,6 +1,6 @@
 .mainImg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(Images/Main.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Images/Main.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../Images/Main.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../Images/Main.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -15,75 +15,6 @@
 .brand {
   font-size: 1.5rem;
   color: black;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.arrow span {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 5px solid #06A8FF;
-  border-right: 5px solid #06A8FF;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin: -10px;
-  -webkit-animation: animate 2s infinite;
-          animation: animate 2s infinite;
-}
-
-.arrow span:nth-child(2) {
-  -webkit-animation-delay: -0.2s;
-          animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-  -webkit-animation-delay: -0.4s;
-          animation-delay: -0.4s;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotate(45deg) translate(-20px, -20px);
-            transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: rotate(45deg) translate(20px, 20px);
-            transform: rotate(45deg) translate(20px, 20px);
-  }
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotate(45deg) translate(-20px, -20px);
-            transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: rotate(45deg) translate(20px, 20px);
-            transform: rotate(45deg) translate(20px, 20px);
-  }
 }
 
 @media only screen and (max-width: 2560px) {
@@ -126,6 +57,7 @@ body {
     color: black;
   }
 }
+
 
 @media only screen and (max-width: 1440px) {
   .centered {
