@@ -12,7 +12,7 @@ function Nav() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarText">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto text-center">
           <li className="nav-item">
             <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
@@ -49,12 +49,14 @@ function Main() {
   })
   return (
     <div>
-      <section>
+      <section id="home" className="transparent">
         <animated.div className="mainImg" style={props} />
         <h1 className="centered">Deck Docks & Things</h1>
-        <p className="lead-centered">Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
-      Licensed and Insured CGC 1526414</p>
-        <p className="lead-centered-next">Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems. Check them out <a href="http://www.tideslide.com/" target="_blank" rel="noopener noreferrer"><span className="tideSlide">here!</span></a></p>
+        <div className="lead-centered">
+          <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
+              Licensed and Insured CGC 1526414</p>
+          <p>Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems. Check them out <a href="http://www.tideslide.com/" target="_blank" rel="noopener noreferrer"><span className="tideSlide">HERE!</span></a></p>
+        </div>
         <div className="arrow">
           <span></span>
           <span></span>

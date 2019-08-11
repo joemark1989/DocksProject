@@ -16,11 +16,11 @@ code {
 }
 
 // Global variables and mixins using sass
-@mixin centerText($top, $left, $fontSize) {
+@mixin centerText($top, $left, $fontSize,$tx,$ty) {
   position: absolute;
   top: $top;
   left: $left;
-  transform: translate(-50%, -50%);
+  transform: translate($tx, $ty);
   font-size: $fontSize;
   color: white;
   text-shadow: 1px 1px #000;
@@ -36,12 +36,6 @@ code {
   }
 }
 
-@mixin image($height,$width){
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: $height;
-    width: $width;
-}
 @mixin background {
   background: grey;
   height: 100vh;
@@ -56,15 +50,29 @@ code {
 
 // Main page (Deck docks and things)
 
-.mainImg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../images/Main.jpg);
-  @include image(100vh,100%);
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.lead-centered{
+  text-align: left;
+  align-items: center;
 }
 
 .tideSlide{
   text-decoration: none;
   font-weight: bold;
+}
+
+section#home{
+  background: url(../images/Main.jpg) no-repeat center center/cover;
 }
 
 
@@ -117,14 +125,12 @@ code {
 
 @media only screen and (max-width: 2560px) {
   .centered {
-    @include centerText(20%, 50%, 85px);
+    @include centerText(20%, 50%, 85px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(41%, 50%, 40px);
+    @include centerText(55%, 50%, 40px,-50%,-50%);
   }
-  .lead-centered-next {
-    @include centerText(68%, 50%, 40px);
-  }
+
   .nav-link {
     font-size: 2rem;
     color: black;
@@ -138,77 +144,61 @@ code {
 
 @media only screen and (max-width: 1440px) {
   .centered {
-    @include centerText(20%, 50%, 65px);
+    @include centerText(20%, 50%, 65px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 50%, 28px);
-  }
-  .lead-centered-next {
-    @include centerText(75%, 50%, 28px);
+    @include centerText(55%, 50%, 28px,-50%,-50%);
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .centered {
-    @include centerText(20%, 50%, 45px);
+    @include centerText(20%, 50%, 45px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 50%, 25px);
-  }
-  .lead-centered-next {
-    @include centerText(70%, 50%, 25px);
+    @include centerText(50%, 50%, 25px,-50%,-50%);
   }
 }
 
 @media only screen and (max-width: 992px) {
   .centered {
-    @include centerText(20%, 50%, 45px);
+    @include centerText(20%, 50%, 45px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 50%, 20px);
-  }
-  .lead-centered-next {
-    @include centerText(70%, 50%, 20px);
+    @include centerText(5%, 50%, 20px,-50%,50%);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .centered {
-    @include centerText(20%, 50%, 35px);
+    @include centerText(20%, 50%, 35px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 50%, 20px);
+    @include centerText(55%, 30%, 20px,-20%,-50%);
+
+
   }
-  .lead-centered-next {
-    @include centerText(75%, 50%, 20px);
-  }
+
   @include navCollapse();
 }
 
 @media only screen and (max-width: 576px) {
   .centered {
-    @include centerText(20%, 50%, 30px);
+    @include centerText(20%, 50%, 30px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(38%, 50%, 18px);
+    @include centerText(60%, 30%, 18px,-20%, -60%);
   }
-  .lead-centered-next {
-    @include centerText(63%, 50%, 18px);
-  }
+
   @include navCollapse();
 }
 
 @media only screen and (max-width: 425px) {
   .centered {
-    @include centerText(20%, 50%, 30px);
+    @include centerText(20%, 50%, 30px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(42%, 35%, 16px);
-    transform: translate(-30%, -60%);
-  }
-  .lead-centered-next {
-    @include centerText(62%, 35%, 16px);
-    transform: translate(-30%, -60%);
+    @include centerText(65%, 35%, 16px,-30%, -60%);
   }
   .nav-link {
     font-size: 1.3rem;
@@ -223,15 +213,10 @@ code {
 
 @media only screen and (max-width: 375px) {
   .centered {
-    @include centerText(17%, 50%, 25px);
+    @include centerText(18%, 50%, 25px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(42%, 30%, 16px);
-    transform: translate(-20%, -60%);
-  }
-  .lead-centered-next {
-    @include centerText(67%, 30%, 16px);
-    transform: translate(-20%, -60%);
+    @include centerText(56%, 20%, 16px,-10%,-50%);
   }
   .nav-link {
     font-size: 1.3rem;
