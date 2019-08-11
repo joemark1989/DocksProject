@@ -118,9 +118,9 @@ section#home{
 
 // about 
 
-// .background{
-//   @include background();
-// }
+.background{
+  @include background();
+}
 
 
 // media queries at certain viewpoints to get correct styling
@@ -167,7 +167,7 @@ section#home{
     @include centerText(20%, 50%, 45px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(5%, 50%, 20px,-50%,50%);
+    @include centerText(10%, 50%, 20px,-50%,50%);
   }
 }
 
@@ -176,7 +176,7 @@ section#home{
     @include centerText(20%, 50%, 35px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(55%, 30%, 20px,-20%,-50%);
+    @include centerText(45%, 30%, 20px,-20%,-50%);
 
 
   }
@@ -186,10 +186,10 @@ section#home{
 
 @media only screen and (max-width: 576px) {
   .centered {
-    @include centerText(20%, 50%, 30px,-50%,-50%);
+    @include centerText(15%, 50%, 30px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(60%, 30%, 18px,-20%, -60%);
+    @include centerText(40%, 30%, 18px,-20%, -60%);
   }
 
   @include navCollapse();
@@ -197,10 +197,10 @@ section#home{
 
 @media only screen and (max-width: 425px) {
   .centered {
-    @include centerText(20%, 50%, 30px,-50%,-50%);
+    @include centerText(15%, 50%, 30px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(65%, 35%, 16px,-30%, -60%);
+    @include centerText(45%, 35%, 16px,-30%, -60%);
   }
   .nav-link {
     font-size: 1.3rem;
@@ -215,10 +215,10 @@ section#home{
 
 @media only screen and (max-width: 375px) {
   .centered {
-    @include centerText(18%, 50%, 25px,-50%,-50%);
+    @include centerText(15%, 50%, 25px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(56%, 20%, 16px,-10%,-50%);
+    @include centerText(40%, 20%, 16px,-10%,-50%);
   }
   .nav-link {
     font-size: 1.3rem;
