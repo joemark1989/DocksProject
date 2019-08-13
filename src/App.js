@@ -31,12 +31,6 @@ function Nav() {
   )
 }
 
-/*
-
-Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems.
-
-http://www.tideslide.com/
-*/
 
 
 // Splash page
@@ -51,7 +45,7 @@ function Main() {
   const div = useSpring({
     opacity: 1,
     from: { opacity: 0},
-    config: {delay: 1000, duration: 3000 }
+    config: {delay: 1000, duration: 2250 }
   })
   
   return (
