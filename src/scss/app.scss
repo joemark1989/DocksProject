@@ -3,12 +3,29 @@
 html * {
   margin: 0;
   padding: 0;  
-  font-family: -apple-system, BlinkMacSystemFont,Arial, sans-serif, Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 // Global variables and mixins using sass
+
+
+@mixin btn($font-size,$width,$padding){
+  border: 3px solid #06a8ff;
+  color: #fff;
+  width: $width;
+  padding: $padding;
+  cursor: pointer;
+  font-size: $font-size;
+  margin-top: 20px;
+
+  &:hover{
+    background: linear-gradient(rgba(160, 160, 160, 0.5), rgba(255, 255, 255, 0.5));
+  }
+}
+
 @mixin centerText($top, $left, $fontSize,$tx,$ty) {
   position: absolute;
   top: $top;
@@ -32,6 +49,12 @@ html * {
 @mixin background {
   background: grey;
   height: 100vh;
+}
+
+@mixin flex() {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 // navbar styling
@@ -58,11 +81,11 @@ html * {
 
 
 section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
   width: 100%;
   height: 100vh;
 }
@@ -72,10 +95,6 @@ section{
   align-items: center;
 }
 
-.tideSlide{
-  text-decoration: none;
-  font-weight: bold;
-}
 
 section#home{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/Main.jpg');
@@ -83,44 +102,33 @@ section#home{
   background-size: cover;
 }
 
+.flex{
+  @include flex();
+}
 
-// Animated arrow to indicate to scroll down
+.btn{
+  @include btn(1.5rem,20%,20px);
+}
 
-.arrow {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.arrow span {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 3px solid #06a8ff;
-  border-right: 3px solid #06a8ff;
-  transform: rotate(45deg);
-  margin: -10px;
-  animation: animate 2s infinite;
-}
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
+.bouncy{
+  animation: bouncy 3s infinite linear;
+  position: relative;
   }
-  50% {
-    opacity: 1;
+
+  @keyframes bouncy {
+    0% {
+      transform: scale(1,1) translate(0px, 0px);
+      }
+      
+    30% {
+      transform: scale(1,0.8) translate(0px, 10px); 
+      }
+      
+    100% {
+      transform: scale(1,1) translate(0px, 0px);
+      }
   }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
-  }
-}
+
 
 // about 
 
@@ -137,6 +145,10 @@ section#home{
   }
   .lead-centered {
     @include centerText(55%, 50%, 40px,-50%,-50%);
+  }
+
+  .btn{
+    @include btn(2.5rem,40%,10px);
   }
 
   .nav-link {
@@ -157,24 +169,53 @@ section#home{
   .lead-centered {
     @include centerText(55%, 50%, 28px,-50%,-50%);
   }
+  .btn{
+    @include btn(1.5rem,40%,10px);
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .centered {
-    @include centerText(20%, 50%, 45px,-50%,-50%);
+    @include centerText(25%, 50%, 45px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(50%, 50%, 25px,-50%,-50%);
+    @include centerText(60%, 50%, 25px,-50%,-50%);
   }
+
+  .btn{
+    @include btn(1.3rem,40%,10px);
+  }
+
 }
 
+
 @media only screen and (max-width: 992px) {
+  .centered {
+    @include centerText(25%, 50%, 45px,-50%,-50%);
+  }
+  .lead-centered {
+    @include centerText(15%, 50%, 20px,-50%,50%);
+  }
+
+  .btn{
+    @include btn(1.3rem,40%,10px);
+  }
+
+}
+
+
+@media only screen and (max-width: 991.98px) {
   .centered {
     @include centerText(20%, 50%, 45px,-50%,-50%);
   }
   .lead-centered {
     @include centerText(10%, 50%, 20px,-50%,50%);
   }
+
+  .btn{
+    @include btn(1.3rem,40%,10px);
+  }
+  @include navCollapse();
 }
 
 @media only screen and (max-width: 768px) {
@@ -182,9 +223,7 @@ section#home{
     @include centerText(20%, 50%, 35px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 30%, 20px,-20%,-50%);
-
-
+    @include centerText(50%, 30%, 20px,-20%,-50%);
   }
 
   @include navCollapse();
@@ -192,10 +231,15 @@ section#home{
 
 @media only screen and (max-width: 576px) {
   .centered {
-    @include centerText(15%, 50%, 30px,-50%,-50%);
+    @include centerText(20%, 50%, 30px,-50%,-50%);
   }
+
   .lead-centered {
-    @include centerText(40%, 30%, 18px,-20%, -60%);
+    @include centerText(60%, 30%, 18px,-20%, -60%);
+  }
+
+  .btn{
+    @include btn(1.3rem,50%,10px);
   }
 
   @include navCollapse();
@@ -203,11 +247,16 @@ section#home{
 
 @media only screen and (max-width: 425px) {
   .centered {
-    @include centerText(15%, 50%, 30px,-50%,-50%);
+    @include centerText(25%, 50%, 30px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(45%, 35%, 16px,-30%, -60%);
+    @include centerText(65%, 35%, 16px,-30%, -60%);
   }
+
+  .btn{
+    @include btn(1.3rem,60%,10px);
+  }
+
   .nav-link {
     font-size: 1.3rem;
     color: black;
@@ -221,11 +270,16 @@ section#home{
 
 @media only screen and (max-width: 375px) {
   .centered {
-    @include centerText(15%, 50%, 25px,-50%,-50%);
+    @include centerText(20%, 50%, 25px,-50%,-50%);
   }
   .lead-centered {
-    @include centerText(40%, 20%, 16px,-10%,-50%);
+    @include centerText(60%, 20%, 16px,-10%,-50%);
   }
+
+  .btn{
+    @include btn(1.3rem,50%,10px);
+  }
+
   .nav-link {
     font-size: 1.3rem;
     color: black;

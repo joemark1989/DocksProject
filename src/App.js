@@ -33,7 +33,7 @@ function Nav() {
 
 
 
-// Splash page
+// Splash page utitlize
 
 function Main() {
   const h1 = useSpring({
@@ -44,26 +44,23 @@ function Main() {
 
   const div = useSpring({
     opacity: 1,
-    from: { opacity: 0},
-    config: {delay: 1000, duration: 2250 }
+    from: { opacity: 0 },
+    config: { delay: 1000, duration: 2250 }
   })
-  
+
   return (
-    <div>
-      <section id="home">
+    <section id="home">
       <animated.h1 style={h1}><h1 className="centered">Deck Docks & Things</h1></animated.h1>
-       <animated.div style={div}><div className="lead-centered">
-          <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
+      <animated.div style={div}><div className="lead-centered">
+        <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
               Licensed and Insured CGC 1526414</p>
-          <p>Now offering sales and installation of the revolutionary TideSlide Mooring Products and Systems. Check them out <a href="http://www.tideslide.com/" target="_blank" rel="noopener noreferrer"><span className="tideSlide">HERE!</span></a></p>
-        </div></animated.div>
-        <div className="arrow">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div></div>
+        <p>We are ready to build better things, are you ready?</p>
+        <div className="flex">
+          <button type="button" className="bouncy btn">Contact Us</button>
         </div>
-      </section>
-    </div>
+      </div></animated.div>
+    </section>
   )
 }
 
