@@ -50,8 +50,8 @@ function Main() {
 
   return (
     <section id="home">
-      <animated.h1 style={h1}><h1 className="centered">Deck Docks & Things</h1></animated.h1>
-      <animated.div style={div}><div className="lead-centered">
+      <animated.h1 style={h1}><h1 className="centered-home-h1">Deck Docks & Things</h1></animated.h1>
+      <animated.div style={div}><div className="centered-home-lead">
         <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
               Licensed and Insured CGC 1526414</p>
         <div></div>
@@ -66,7 +66,18 @@ function Main() {
 
 function About() {
   return (
-    <div className="section background"></div>
+    <section className="about-h1-background">
+      <h1 className="about-h1">About Us</h1>
+      <div class="firstSection"></div>
+      <div class="secondSection"></div>
+      <div>
+        <h1 className="centered-about-h1-left">Exellence and Professionalism</h1>
+        <p className="centered-about-lead-left">Decks Docks & Things LLC. builds custom decks, docks, piers, bulkheads, seawalls and boatlifts throughout Saint Johns, Flagler and Duvall Counties. It is our mandate to exceed your expectations in everything we do. We build marine ready durable, multi-purpose spaces for your business and home.</p>
+        <h1 className="centered-about-h1-right">Personal Approach</h1>
+        <p className="centered-about-lead-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
+      </div>
+    </section>
+
   )
 }
 
