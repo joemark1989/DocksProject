@@ -17,7 +17,7 @@ function Nav() {
             <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
+            <a className="nav-link" href="#">Services</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Gallery</a>
@@ -35,7 +35,7 @@ function Nav() {
 
 // Splash page utitlize
 
-function Main() {
+function Home() {
   const h1 = useSpring({
     opacity: 1,
     from: { opacity: 0 },
@@ -64,17 +64,24 @@ function Main() {
   )
 }
 
-function About() {
+function Services() {
   return (
-    <section className="about-h1-background">
-      <h1 className="about-h1">About Us</h1>
+    <section className="service-h1-background">
+      <h1 className="service-h1">Services</h1>
       <div class="firstSection"></div>
       <div class="secondSection"></div>
       <div>
-        <h1 className="centered-about-h1-left">Exellence and Professionalism</h1>
-        <p className="centered-about-lead-left">Decks Docks & Things LLC. builds custom decks, docks, piers, bulkheads, seawalls and boatlifts throughout Saint Johns, Flagler and Duvall Counties. It is our mandate to exceed your expectations in everything we do. We build marine ready durable, multi-purpose spaces for your business and home.</p>
-        <h1 className="centered-about-h1-right">Personal Approach</h1>
-        <p className="centered-about-lead-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
+        <h1 className="centered-service-h1-top-left">Personal Approach</h1>
+        <p className="centered-service-lead-top-left">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
+
+        <h1 className="centered-service-h1-top-right">Personal Approach</h1>
+        <p className="centered-service-lead-top-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
+
+        <h1 className="centered-service-h1-bottom-left">Personal Approach</h1>
+        <p className="centered-service-lead-bottom-left">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
+
+        <h1 className="centered-service-h1-bottom-right">Personal Approach</h1>
+        <p className="centered-service-lead-bottom-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
       </div>
     </section>
 
@@ -88,8 +95,8 @@ function App() {
   return (
     <div className="">
       <Nav />
-      <Main />
-      <About />
+      <Home />
+      <Services />
     </div >
   );
 }
