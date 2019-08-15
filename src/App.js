@@ -79,8 +79,8 @@ function Services() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="text-center">Services</h1>
-            <div class="line"></div>
+            <h1 className="text-center test">Services</h1>
+            <div class="header-line"></div>
             <h1 className="text-center mt-3">Working With A Budget?</h1>
             <p className="mt-3">DD&T works to provide you a stress-free and affordable outdoor living space solution that checks all the boxes of your must-have list. From start to finish, we strive to provide complete customer satisfaction and an incredible space you can be proud of for many years to come. Contact us for a free consultation today!
             No One Beats Our Custom Deck Installations.
