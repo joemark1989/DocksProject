@@ -33,7 +33,7 @@ function Nav() {
 
 
 
-// Splash page utitlized bootstrap grid and some inline margins.
+// Splash page used bootstrap grid and some inline margins.
 
 function Home() {
   const h1 = useSpring({
@@ -52,10 +52,10 @@ function Home() {
     <section id="home">
       <div className="container centerText">
         <div className="row">
-          <div className="col-12 text-center"><animated.h1 style={h1}><h1>Deck Docks & Things</h1></animated.h1>
+          <div className="col-12"><animated.h1 style={h1}><h1 className="text-center">Deck Docks & Things</h1></animated.h1>
             <animated.div style={div}>
-              <div className="text-left mt-3">
-              <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
+              <div className="mt-3">
+                <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
               Licensed and Insured CGC 1526414</p>
                 <p className="text-center mt-3">We are ready to build better things.</p>
                 <h4 className="text-center mt-3"><span><strong>Are you ready?</strong></span></h4>
@@ -71,36 +71,36 @@ function Home() {
   )
 }
 
+// Used bootstrap grid and some inline margins.
+
 function Services() {
   return (
-    <section className="service-h1-background">
+    <div className="background">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="service-h1">Services</h1>
-            <div class="firstSection"></div>
-            <div class="secondSection"></div>
+            <h1 className="text-center">Services</h1>
+            <div class="line"></div>
+            <h1 className="text-center mt-3">Working With A Budget?</h1>
+            <p className="mt-3">DD&T works to provide you a stress-free and affordable outdoor living space solution that checks all the boxes of your must-have list. From start to finish, we strive to provide complete customer satisfaction and an incredible space you can be proud of for many years to come. Contact us for a free consultation today!
+            No One Beats Our Custom Deck Installations.
+            Get a customized vinyl or wood deck and dock combination for a perfect waterfront solution.​</p>
+            <h1 className="text-center mt-3">Working With A Budget?</h1>
+            <p className="mt-3">Decks, docks, bulkheads, lifts, hoists and more, we cater to all your custom needs.​</p>
           </div>
         </div>
       </div>
-      <div>
-        <h1 className="centered-service-h1-top-left">Personal Approach</h1>
-        <p className="centered-service-lead-top-left">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
-
-        <h1 className="centered-service-h1-top-right">Personal Approach</h1>
-        <p className="centered-service-lead-top-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
-
-        <h1 className="centered-service-h1-bottom-left">Personal Approach</h1>
-        <p className="centered-service-lead-bottom-left">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
-
-        <h1 className="centered-service-h1-bottom-right">Personal Approach</h1>
-        <p className="centered-service-lead-bottom-right">Always a great addition to any home, decks docks are becoming more versatile and are in use practically year-round. With your imagination and our expertise, your ultimate outdoor hangout for your family is a phone call away. Just about anything is possible! We specialize in designing and building very special outdoor spaces that reflect the personalities of the people that use them. Decks and docks can be complicated engineering projects, we have the experience, equipment and qualifications necessary to bring your vision to a reality.</p>
-      </div>
-    </section>
+    </div >
 
   )
 }
 
+
+function Gallery (){
+  return(
+    <section></section>
+  )
+}
 
 
 
@@ -110,6 +110,7 @@ function App() {
       <Nav />
       <Home />
       <Services />
+      <Gallery/>
     </div >
   );
 }

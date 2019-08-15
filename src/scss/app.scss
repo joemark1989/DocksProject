@@ -48,17 +48,17 @@ html * {
   }
 }
 
-    
-  }
+}
 
 
 @mixin centerText($top) {
   position: relative;
   top: $top;
 }
+
 @mixin navCollapse() {
   .navbar-collapse {
-    background: rgba(140, 140, 140, 0.9);
+    background: rgba(255, 248, 248, 0.9);
     position: absolute;
     top: 85%;
     right: 0;
@@ -68,20 +68,10 @@ html * {
 
 }
 
-@mixin background {
-  background: grey;
-  height: 100vh;
-}
-
 @mixin flex() {
   display: flex;
   align-content: center;
   justify-content: center;
-}
-
-@mixin textLeft (){
-    text-align: left;
-    align-items: center;
 }
 
 // navbar styling
@@ -115,6 +105,7 @@ html * {
 section{
   width: 100%;
   height: 100vh;
+  background: rgb(230, 230, 230);
 }
 
 section#home{
@@ -162,49 +153,18 @@ h1{
 
 // services
 
-.service-h1{
-  margin-top: 50px;
-  font-size: 3.5rem;
-  color: white;
-  text-shadow: 1px 1px #000;
-}
-
-.service-h1-background{
+.background{
   background: linear-gradient(#8a8a8a, #8a8a8a);
+  padding: 2rem;
 }
 
-.firstSection{
+.line{
+  content: '';
 	width: 100%;
-	height: 20px;
-	background: linear-gradient(#8a8a8a, #5c5c5c);
-	position: relative;
-}
-
-.secondSection{
-	width: 100%;
-	height: 95%;
-	background: linear-gradient(#5c5c5c, #8a8a8a);
-	position: relative;
-}
-
-.secondSection:before{
-	content: '';
-	width: 100%;
-	height: 3px;
+	height: 2px;
 	position: absolute;
-	top: -20px;
+	top: 5%;
 	left: 0;
-	background-color: #fff;
-  margin-bottom: 5px;
-}
-
-.secondSection:after{
-	content: '';
-	width: 100%;
-	height: 3px;
-	position: absolute;
-	top: -75px;
-	right: 0;
 	background-color: #fff;
 }
 
@@ -236,10 +196,6 @@ h1{
     @include btn(2rem,30%,10px);
   }
   
-}
-
-@media only screen and (max-width: 1440px) {
-
 }
 
 @media only screen and (max-width: 1200px) {
