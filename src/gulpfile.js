@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin')
 
 const files = {
     scssPath: './scss/*.scss',
-    imagePath: './images/*'
+    imagePath: './Images/*'
 }
 
 

@@ -55,7 +55,7 @@ function Home() {
           <div className="col-12"><animated.h1 style={h1}><h1 className="text-center">Deck Docks & Things</h1></animated.h1>
             <animated.div style={div}>
               <div className="mt-3">
-                <p>Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
+                <p className="">Decks, docks, piers, bulkheads, lifts and more. We offer complete turn key projects as well as pile driving for the DIY or the marine carpenter.
               Licensed and Insured CGC 1526414</p>
                 <p className="text-center mt-3">We are ready to build better things.</p>
                 <h4 className="text-center mt-3"><span><strong>Are you ready?</strong></span></h4>
@@ -79,8 +79,10 @@ function Services() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="text-center test">Services</h1>
+            <h1 className="text-center">Services</h1>
             <div class="header-line"></div>
+          </div>
+          <div className="col-12-sm">
             <h1 className="text-center mt-3">Working With A Budget?</h1>
             <p className="mt-3">DD&T works to provide you a stress-free and affordable outdoor living space solution that checks all the boxes of your must-have list. From start to finish, we strive to provide complete customer satisfaction and an incredible space you can be proud of for many years to come. Contact us for a free consultation today!
             No One Beats Our Custom Deck Installations.
@@ -96,8 +98,8 @@ function Services() {
 }
 
 
-function Gallery (){
-  return(
+function Gallery() {
+  return (
     <section></section>
   )
 }
@@ -110,7 +112,7 @@ function App() {
       <Nav />
       <Home />
       <Services />
-      <Gallery/>
+      <Gallery />
     </div >
   );
 }
