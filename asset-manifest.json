@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/DocksProject/static/css/main.d0837029.chunk.css",
-    "main.js": "/DocksProject/static/js/main.72f5743a.chunk.js",
-    "main.js.map": "/DocksProject/static/js/main.72f5743a.chunk.js.map",
+    "main.css": "/DocksProject/static/css/main.1a1a0a50.chunk.css",
+    "main.js": "/DocksProject/static/js/main.567ae8ad.chunk.js",
+    "main.js.map": "/DocksProject/static/js/main.567ae8ad.chunk.js.map",
     "runtime~main.js": "/DocksProject/static/js/runtime~main.686c2f99.js",
     "runtime~main.js.map": "/DocksProject/static/js/runtime~main.686c2f99.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/DocksProject/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.c53ba0d0.chunk.js": "/DocksProject/static/js/2.c53ba0d0.chunk.js",
     "static/js/2.c53ba0d0.chunk.js.map": "/DocksProject/static/js/2.c53ba0d0.chunk.js.map",
     "index.html": "/DocksProject/index.html",
-    "precache-manifest.0f5b6cbe1442f4cd254155f8e6d3a0e9.js": "/DocksProject/precache-manifest.0f5b6cbe1442f4cd254155f8e6d3a0e9.js",
+    "precache-manifest.c4be8badf91d374c844e0cbf498bc3ac.js": "/DocksProject/precache-manifest.c4be8badf91d374c844e0cbf498bc3ac.js",
     "service-worker.js": "/DocksProject/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/DocksProject/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.d0837029.chunk.css.map": "/DocksProject/static/css/main.d0837029.chunk.css.map",
+    "static/css/main.1a1a0a50.chunk.css.map": "/DocksProject/static/css/main.1a1a0a50.chunk.css.map",
     "static/media/app.scss": "/DocksProject/static/media/Main.de8bc3d0.jpg"
   }
 }
