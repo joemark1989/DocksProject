@@ -152,9 +152,9 @@ h1{
 
 // services
 
-.background{
+.background-color{
   background: linear-gradient(#8a8a8a, #8a8a8a);
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .header-line{
@@ -164,7 +164,8 @@ h1{
   margin: 0 auto;
 }
 
-// $top, $left, $fontSize,$tx,$ty
+
+
 
 
 // media queries at certain viewpoints to get correct styling
@@ -185,7 +186,7 @@ h1{
     font-size: 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 510px;
   }
 
   .btn{
@@ -238,6 +239,3 @@ h1{
     width: auto;
   }
 }
-
-
-
