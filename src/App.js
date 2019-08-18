@@ -14,16 +14,16 @@ function Nav() {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav ml-auto text-center">
           <li className="nav-item">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-link" aria-label="home" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Services</a>
+            <a className="nav-link" aria-label="services" href="#">Services</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Gallery</a>
+            <a className="nav-link" aria-label="gallery" href="#">Gallery</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
+            <a className="nav-link" aria-label="contact" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -60,7 +60,7 @@ function Home() {
                 <p className="text-center mt-3">We are ready to build better things.</p>
                 <h4 className="text-center mt-3"><span><strong>Are you ready?</strong></span></h4>
                 <div className="flex">
-                  <button type="button" className="bouncy btn">Contact Us</button>
+                  <button type="button" aria-label="contact us" className="bouncy btn">Contact Us</button>
                 </div>
               </div>
             </animated.div>
@@ -112,6 +112,7 @@ Decks, docks, bulkheads, lifts, hoists and more, we cater to all your custom nee
 
 */
 
+// Used bootstrap grid and some inline margins.
 
 function Gallery() {
   return (

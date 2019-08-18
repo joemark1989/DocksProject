@@ -16,7 +16,6 @@ section{
 
 // Global variables and mixins using sass
 
-
 @mixin btn($font-size,$width,$padding){
   border: 3px solid #06a8ff;
   color: #fff;
@@ -102,8 +101,6 @@ section{
   color: #06a8ff !important;
 }
 
-
-
 // Home page (Deck docks and things)
 
 section#home{
@@ -147,7 +144,6 @@ h1{
       }
   }
 
-
 // services
 
 .background-color{
@@ -168,14 +164,6 @@ section#gallery{
   background: linear-gradient(#6d6d6d,#b6e5ff );
   padding: 2rem;
 }
-
-
-
-
-
-
-
-
 
 // media queries at certain viewpoints to get correct styling
 
@@ -216,7 +204,6 @@ section#gallery{
 
   p{
     font-size: 1.3rem;
-    width: 500px;
   }
 
 }
