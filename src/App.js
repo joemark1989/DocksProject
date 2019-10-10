@@ -1,5 +1,9 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring'
+// import Images from "react-photo-gallery";
+// import Cards from './Cards'
+import CardImages from './CardImages';
+import DockImages from './CardImages';
 
 
 //nav I use some inline bootstrap styling here to get the effect of fixed-top
@@ -81,7 +85,7 @@ function Services() {
         <div className="row">
           <div className="col-12">
             <h1 className="text-center">Services</h1>
-            <div class="header-line"></div>
+            <div className="header-line"></div>
           </div>
           <div className="col-xl-6 mt-3">
             <h2 className="text-center">Custom Decks and Docks</h2>
@@ -121,17 +125,16 @@ function Gallery() {
         <div className="row">
           <div className="col-12">
             <h1 className="text-center">Working With A Budget?</h1>
-            <div class="header-line"></div>
           </div>
           <div className="col-xl-12 mt-3">
             <p className="mt-3">DD&T works to provide you a stress-free and affordable outdoor living space solution that checks all the boxes of your must-have list. From start to finish, we strive to provide complete customer satisfaction and an incredible space you can be proud of for many years to come.</p>
           </div>
         </div>
+        <DockImages/>
       </div>
     </section>
   )
 }
-
 
 
 function App() {
